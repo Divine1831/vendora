@@ -62,3 +62,384 @@
     padding: 24px 18px;
   }
 }
+
+/* =================================
+   VENDORA MOBILE-FIRST WORKSPACE
+================================= */
+
+.mobile-sidebar-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-close,
+.mobile-menu-button,
+.sidebar-backdrop {
+  display: none;
+}
+
+.dashboard-heading-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Better form and modal sizing */
+.auth-modal,
+.onboarding-card,
+.add-modal {
+  width: min(440px, calc(100% - 24px));
+  max-height: calc(100dvh - 32px);
+  overflow-y: auto;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+}
+
+.auth-form input,
+.auth-form textarea,
+.auth-form select {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  box-sizing: border-box;
+}
+
+.auth-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .app-sidebar {
+    width: 220px;
+  }
+
+  .dashboard-top {
+    padding: 0 24px;
+  }
+
+  .dashboard-content {
+    padding: 28px 24px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Phone */
+@media (max-width: 720px) {
+  .app-shell {
+    display: block;
+    width: 100%;
+    min-height: 100dvh;
+  }
+
+  /* Slide-out navigation */
+  .app-sidebar {
+    position: fixed;
+    z-index: 101;
+    inset: 0 auto 0 0;
+    width: min(285px, 85vw);
+    min-height: 100dvh;
+    height: 100dvh;
+    overflow-y: auto;
+    padding: 24px 18px;
+    transform: translateX(-105%);
+    transition: transform .25s ease;
+    box-shadow: 15px 0 45px #0006;
+  }
+
+  .app-sidebar.mobile-open {
+    transform: translateX(0);
+  }
+
+  .app-sidebar .brand {
+    margin: 0;
+    font-size: 23px;
+  }
+
+  .mobile-sidebar-heading {
+    margin-bottom: 38px;
+  }
+
+  .mobile-close {
+    display: grid;
+  }
+
+  .workspace-label {
+    font-size: 9px;
+  }
+
+  .app-sidebar .side-link {
+    justify-content: flex-start;
+    font-size: 12px;
+    padding: 13px 11px;
+  }
+
+  .app-sidebar .side-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .app-sidebar .soon {
+    display: inline-block;
+    font-size: 7px;
+  }
+
+  .app-sidebar .user-chip {
+    justify-content: flex-start;
+  }
+
+  .app-sidebar .user-chip > div:last-child {
+    display: block;
+  }
+
+  .app-sidebar .logout {
+    display: flex;
+  }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #020711b8;
+    backdrop-filter: blur(3px);
+  }
+
+  /* Mobile header */
+  .dashboard-top {
+    height: 70px;
+    padding: 0 16px;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #0a111e;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #29394e;
+  }
+
+  .dashboard-top h2 {
+    font-size: 15px;
+  }
+
+  .dashboard-content {
+    width: 100%;
+    padding: 24px 16px;
+  }
+
+  .welcome-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  .welcome-row h1 {
+    font-size: clamp(22px, 6vw, 28px);
+    line-height: 1.25;
+  }
+
+  .welcome-row > button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .metric-card {
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .metric-card strong {
+    font-size: clamp(17px, 5vw, 23px);
+    overflow-wrap: anywhere;
+  }
+
+  .panel {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .panel-heading {
+    padding: 16px;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .panel-actions {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .search-box {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .search-box input {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .panel-actions .button {
+    flex-shrink: 0;
+  }
+
+  /* Product table becomes individual cards */
+  .product-table-wrap {
+    overflow: visible;
+    padding: 12px;
+  }
+
+  .product-table,
+  .product-table tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .product-table thead {
+    display: none;
+  }
+
+  .product-table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #0d1929;
+    border: 1px solid #29394e;
+    border-radius: 10px;
+  }
+
+  .product-table td {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .product-table td::before {
+    content: attr(data-label);
+    color: #8494aa;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+  }
+
+  .product-table td:first-child {
+    grid-column: 1 / -1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #29394e;
+  }
+
+  .product-name {
+    min-width: 0;
+  }
+
+  .product-name > div:last-child {
+    min-width: 0;
+  }
+
+  .product-name small {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .order-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-disclaimer {
+    line-height: 1.6;
+  }
+
+  .modal-backdrop {
+    padding: 12px;
+    overflow-y: auto;
+  }
+
+  .add-modal {
+    margin: auto;
+    padding: 25px 20px;
+  }
+
+  .auth-form .button {
+    min-height: 46px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 390px) {
+  .dashboard-content {
+    padding: 20px 12px;
+  }
+
+  .dashboard-top {
+    padding: 0 12px;
+  }
+
+  .metric-grid {
+    gap: 8px;
+  }
+
+  .metric-card {
+    padding: 11px;
+  }
+
+  .metric-card strong {
+    font-size: 17px;
+  }
+
+  .metric-card small {
+    font-size: 8px;
+  }
+
+  .panel-actions {
+    flex-wrap: wrap;
+  }
+
+  .panel-actions .search-box {
+    flex-basis: 100%;
+  }
+
+  .panel-actions .button {
+    width: 100%;
+  }
+}

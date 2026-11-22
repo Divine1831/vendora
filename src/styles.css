@@ -3,3 +3,62 @@
 @media(max-width:1000px){.hero{grid-template-columns:1fr;gap:35px;padding-top:70px}.hero-copy{text-align:center}.hero-lede{margin-left:auto;margin-right:auto}.hero-actions,.hero-proof{justify-content:center}.hero-visual{width:min(700px,100%);margin:auto}.workflow-inner{gap:45px}.callout{padding:40px}.faq-section{gap:45px}}
 @media(max-width:720px){.container{width:min(100% - 34px,560px)}.site-header{height:70px}.desktop-nav{display:none}.nav-actions{gap:4px}.nav-actions .button{font-size:11px;padding:10px 11px}.brand{font-size:21px}.hero{padding-top:57px;padding-bottom:55px;min-height:0}.hero h1{font-size:clamp(43px,11vw,60px);letter-spacing:-2px}.hero-lede{font-size:14px}.hero-proof{font-size:9px;margin-top:30px}.hero-visual{padding:25px 0 35px}.dashboard-window{transform:none}.mock-dashboard{grid-template-columns:95px 1fr;min-height:300px}.mock-sidebar{font-size:7px;padding:12px 5px;gap:10px}.mock-sidebar>div:not(.mock-logo){gap:5px;padding:6px 5px}.mock-sidebar svg{width:11px}.mock-logo{font-size:9px;margin-left:3px}.mock-content{padding:14px 10px}.mock-welcome h3{font-size:12px}.mock-welcome small{font-size:6px}.mock-date{font-size:6px;padding:5px}.mock-stats{gap:4px}.mock-stats>div{padding:7px 5px}.mock-stats strong{font-size:12px}.mock-stats small,.mock-stats em{font-size:6px}.mock-chart-card{padding:8px}.chart-bars{height:75px;gap:2px}.mock-bottom{gap:4px}.mock-bottom>div{padding:7px}.mock-bottom b,.mock-bottom span{font-size:7px}.floating-card{padding:8px}.float-ai{right:-5px}.float-stock{left:-5px}.floating-card b{font-size:8px}.floating-card small{font-size:7px}.float-icon,.stock-icon{width:24px;height:24px}.trust-inner{gap:12px;height:auto;min-height:60px;font-size:7px;letter-spacing:.7px;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}.section{padding-top:75px;padding-bottom:75px}.section-heading{margin-bottom:32px}.section-heading h2,.workflow-copy h2,.faq-section h2{font-size:36px;letter-spacing:-1.8px}.feature-grid{grid-template-columns:1fr 1fr;gap:10px}.feature-card{padding:18px 15px}.feature-card p{font-size:11px;min-height:85px}.feature-card h3{font-size:13px}.feature-icon{width:36px;height:36px;margin-bottom:16px}.workflow-inner{grid-template-columns:1fr;gap:35px;padding-top:75px;padding-bottom:75px}.workflow-copy{text-align:center}.workflow-copy>p:not(.eyebrow){margin-left:auto;margin-right:auto}.step{grid-template-columns:28px 1fr 22px;gap:12px}.callout{grid-template-columns:1fr;padding:30px 23px;text-align:center}.callout h2{font-size:32px}.callout>div:first-child>p:not(.eyebrow){margin-left:auto;margin-right:auto}.callout-art{height:220px}.pricing-grid{grid-template-columns:1fr;max-width:420px;gap:18px}.price-card{padding:24px}.faq-section{grid-template-columns:1fr;gap:20px;padding-top:75px;padding-bottom:75px}.final-cta-inner{padding-top:70px;padding-bottom:70px}.final-cta h2{font-size:44px}.footer-inner{padding-top:25px;padding-bottom:25px;flex-direction:column;align-items:flex-start}.footer-links{flex-wrap:wrap;gap:15px}.footer-inner>span{line-height:1.6}.auth-modal,.onboarding-card{padding:27px 22px}.app-sidebar{width:62px;padding:20px 8px}.app-sidebar .brand{margin:0 auto 35px;font-size:0}.app-sidebar .brand-mark{width:31px;height:31px}.workspace-label,.side-link:not(.side-active),.side-link.side-active{font-size:0;justify-content:center;padding:12px 0}.side-link svg{width:19px;height:19px}.side-link .soon,.sidebar-bottom .user-chip>div:last-child,.logout{display:none}.sidebar-bottom .user-chip{justify-content:center}.dashboard-top{padding:0 15px}.dashboard-content{padding:25px 14px}.welcome-row{align-items:flex-start;flex-direction:column}.welcome-row h1{font-size:23px}.metric-grid{grid-template-columns:1fr 1fr;gap:8px}.metric-card{padding:13px}.metric-card strong{font-size:20px}.panel-heading{align-items:flex-start;flex-direction:column;padding:15px}.panel-actions{width:100%}.search-box{flex:1}.search-box input{width:100%;min-width:0}.product-table td,.product-table th{padding:11px 12px}.order-row{grid-template-columns:1fr 1fr}.top-right{gap:8px}.status-pill{font-size:0}.status-pill i{width:8px;height:8px}}
 @media(max-width:390px){.feature-grid{grid-template-columns:1fr}.feature-card p{min-height:0}.hero-actions{gap:13px;flex-wrap:wrap}.hero-actions .button{padding:13px}.mock-sidebar{display:none}.mock-dashboard{grid-template-columns:1fr}.hero-proof .proof-divider{display:none}}
+/* VENDORA FORM ALIGNMENT FIX */
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  text-align: left;
+}
+
+.auth-form input,
+.auth-form textarea,
+.auth-form select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.auth-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.auth-form button {
+  width: 100%;
+  min-height: 44px;
+}
+
+.auth-modal,
+.onboarding-card {
+  width: min(440px, 100%);
+  box-sizing: border-box;
+}
+
+.auth-modal *,
+.onboarding-card * {
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .auth-modal,
+  .onboarding-card {
+    width: 100%;
+    padding: 24px 18px;
+  }
+}
